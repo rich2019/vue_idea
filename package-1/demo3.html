@@ -2,26 +2,32 @@
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>bind</title>
+    <title>循环</title>
 </head>
 <body>
 
 <div id="app">
-{{message}}
-    <br>
-{{hello}}
-    <span v-bind:title="message">xinxi </span>
+    <li v-for="(a, index) in arr">
+    {{index}} -- {{a.name}}
+    </li>
+
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 <script type="text/javascript">
-    var app = new Vue({
+
+    var vm = new Vue({
         el: "#app",
         data: {
-            message: "hello vue",
-            hello: "nihao"
+            arr: [
+                {name: "张三"},
+                {name: "王二"},
+                {name: "李四"}
+            ]
         }
     });
+
 </script>
 </body>
 </html>

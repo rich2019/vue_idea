@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>判断</title>
+</head>
+<body>
+
+<div id="app">
+
+<!--    如果ok为true,显示yes-->
+    <h1 v-if="ok">yes</h1>
+<!--    否则显示no-->
+    <h1 v-else>no</h1>
+
+</div>
+<div id="app2">
+
+    <h1 v-if="type==='a'">a</h1>
+    <h1 v-else-if="type==='b'">b</h1>
+    <h1 v-else>c</h1>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script type="text/javascript">
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            ok: true
+        }
+    });
+    var vm2 = new Vue({
+        el: "#app2",
+        data: {
+            type: 'a'
+        }
+    });
+</script>
+</body>
+</html>

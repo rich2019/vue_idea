@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>组件</title>
+</head>
+<body>
+
+<div id="app">
+
+    <cdd v-for="item in items" v-bind:cd="item"></cdd>
+
+</div>
+
+
+<!--<script src="https://cdn.jsdelivr.net/npm/vue"></script>-->
+<!-- 开发环境版本，包含了有帮助的命令行警告 -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script type="text/javascript">
+
+
+
+    var vm = new Vue({
+        el: "#app",
+        mounted(){  //钩子函数  链式编程  要求ES6
+            axios.get('data.json').then(response=>(console.log(response.data)))
+        }
+    });
+
+</script>
+</body>
+</html>

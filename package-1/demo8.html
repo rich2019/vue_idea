@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>组件</title>
+</head>
+<body>
+
+<div id="app">
+
+    <p>current1----{{current1()}}</p>
+    <p>current1----{{current2}}</p>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script type="text/javascript">
+
+
+
+    var vm = new Vue({
+        el: "#app",
+        methods: {
+            current1: function () {
+                return new Date().toLocaleString();
+            }
+        },
+        computed: {
+            current2: function () {
+                return new Date().toLocaleString();
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
